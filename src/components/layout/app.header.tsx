@@ -55,22 +55,27 @@ function AppHeader() {
             </div>
 
             <NavDropdown title={renderFlag(i18n.resolvedLanguage!)}>
-              <div
-                onClick={() => i18n.changeLanguage("en")}
-                className="dropdown-item d-flex gap-2 align-items-center"
-                style={{ cursor: "pointer" }}
-              >
-                <img style={{ height: 20, width: 20 }} src={enFlag} alt="english" />
-                <span>English</span>
-              </div>
-              <div
-                onClick={() => i18n.changeLanguage("vi")}
-                className="dropdown-item d-flex gap-2 align-items-center"
-                style={{ cursor: "pointer" }}
-              >
-                <img style={{ height: 20, width: 20 }} src={viFlag} alt="vietnamese" />
-                <span>Tiếng Việt</span>
-              </div>
+              <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
+                <div
+                  onClick={() => i18n.changeLanguage("en")}
+                  className="dropdown-item d-flex gap-2 align-items-center"
+                  style={{ cursor: "pointer" }}
+                >
+                  <img style={{ height: 20, width: 20 }} src={enFlag} alt="english" />
+                  <span>English</span>
+                </div>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
+                <div
+                  onClick={() => i18n.changeLanguage("vi")}
+                  className="dropdown-item d-flex gap-2 align-items-center"
+                  style={{ cursor: "pointer" }}
+                >
+                  <img style={{ height: 20, width: 20 }} src={viFlag} alt="vietnamese" />
+                  <span>Tiếng Việt</span>
+                </div>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
