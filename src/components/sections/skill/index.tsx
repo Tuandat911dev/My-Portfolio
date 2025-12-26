@@ -4,9 +4,13 @@ import Marquee from "react-fast-marquee";
 import "./skill.scss";
 import { Col, Row } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { AppContext } from "@/components/context/app.context";
+
 
 const Skill = () => {
   const { t } = useTranslation();
+  const { theme } = useContext(AppContext)!;
   return (
     <Row className="skills-container">
       <Col xs={12} className="my-3 my-md-5">
@@ -17,6 +21,7 @@ const Skill = () => {
       <Col xs={12} className="skills-marquee">
         <Marquee
           gradient={true}
+          gradientColor={theme === "dark" ? "#0d1224" : "#fff"}
           speed={50}
           pauseOnHover={true}
           pauseOnClick={true}

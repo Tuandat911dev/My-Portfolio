@@ -11,7 +11,7 @@ interface IProps {
 
 type ThemeContextType = "light" | "dark";
 
-const AppContext = createContext<IAppContext | null>(null);
+export const AppContext = createContext<IAppContext | null>(null);
 
 export const AppContextProvider = (props: IProps) => {
   const { children } = props;
