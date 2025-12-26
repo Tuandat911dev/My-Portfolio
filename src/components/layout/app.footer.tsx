@@ -2,7 +2,7 @@
 const AppFooter = () => {
     return (
         <div className="text-center my-3">
-            Copyright © {new Date().getFullYear()} Phạm Tuấn Đạt. Made with <span style={{
+            Copyright © {new Date().getFullYear()} Pham Tuan Dat. Made with <span style={{
                 color: "#e25555"
             }}>♥</span> in VietNam
         </div>
