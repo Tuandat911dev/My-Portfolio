@@ -45,7 +45,7 @@ const Introduction = () => {
             </i>
             {t("introSection.and")}
             <i>
-              <b className="text-pink-100"> Node.js</b>
+              <b className="text-pink-100"> React.js / Next.js</b>
             </i>
           </p>
         </Col>
