@@ -16,7 +16,7 @@ const Skill = () => {
       </Col>
       <Col xs={12} className="skills-marquee">
         <Marquee
-          gradient={false}
+          gradient={true}
           speed={50}
           pauseOnHover={true}
           pauseOnClick={true}
