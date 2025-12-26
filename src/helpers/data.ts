@@ -6,10 +6,10 @@ import springMvcImg from "assets/project/spring-mvc.png";
 import springRestImg from "assets/project/spring-rest.png";
 
 export const APP_DATA = {
-  YOUTUBE_URL: "https://www.youtube.com/@hoidanit",
-  TIKTOK_URL: "https://www.tiktok.com/@hoidanit",
-  UDEMY_URL: "https://www.udemy.com/user/eric-7039/",
-  FACEBOOK_URL: "https://www.facebook.com/askITwithERIC/",
+  GMAIL_URL: "mailto:pdat100111@gmail.com",
+  GITHUB_URL: "https://github.com/Tuandat911dev",
+  LINKED_URL: "https://www.linkedin.com/in/tuan-dat-pham-90b837366",
+  FACEBOOK_URL: "https://www.facebook.com/tuan.at.464773",
 };
 
 export const EXPERIENCES = [

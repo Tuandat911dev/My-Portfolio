@@ -98,10 +98,10 @@ const About = () => {
         <Col md={6} xs={12} className=" mt-md-5 mt-3">
           <h3 className="mb-md-5 mb-2">{t("aboutSection.find")}</h3>
           <SocialMedia
-            youtube={APP_DATA.YOUTUBE_URL}
+            gmail={APP_DATA.GMAIL_URL}
+            github={APP_DATA.GITHUB_URL}
+            linkedin={APP_DATA.LINKED_URL}
             facebook={APP_DATA.FACEBOOK_URL}
-            tiktok={APP_DATA.TIKTOK_URL}
-            udemy={APP_DATA.UDEMY_URL}
           />
         </Col>
         <Col md={6} xs={12} className="d-flex flex-column align-items-center justify-content-center">
