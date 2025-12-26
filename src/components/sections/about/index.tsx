@@ -81,8 +81,8 @@ const About = () => {
                         <FaGraduationCap size={36} />
                       </div>
                       <div className="info">
-                        <p className="title">Softwaren Engineer</p>
-                        <p className="company">Hanoi University of Science and Technology (HUST)</p>
+                        <p className="title">{t("aboutSection.degree")}</p>
+                        <p className="company">{t("aboutSection.university")}</p>
                       </div>
                     </div>
                   </div>
