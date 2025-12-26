@@ -1,28 +1,60 @@
 {
-    "appHeader": {
-        "brand": "Pham Tuan Dat",
-        "home": "Home",
-        "project": "Project",
-        "contact": "Contact",
-        "about": "About"
+  "appHeader": {
+    "brand": "Pham Tuan Dat",
+    "home": "Home",
+    "project": "Project",
+    "contact": "Contact",
+    "about": "About"
+  },
+  "heroSection": {
+    "greeting": "Hi There!",
+    "my": "I'M",
+    "exp": "My Skill",
+    "cv": "Get Resume",
+    "work": ["Software Developer", "Freelancer", "Knowledge sharer"]
+  },
+  "introSection": {
+    "about": "About me",
+    "and": "and",
+    "heading1": "I fell in love with programming and I've gathered a fair share of knowledge along the way... I think! 🤷‍♂️",
+    "heading2": "I have had the opportunity to learn, practice, and participate in projects using",
+    "heading3": "My fields of interest include Web Technologies and developing projects that",
+    "heading4": "solve real-world problems",
+    "heading5": "Whenever possible, I also apply my passion for developing products with"
+  },
+  "experience": {
+    "title": "Experiences"
+  },
+  "skill": {
+    "title": "Skills"
+  },
+
+  "projects": {
+    "myRecent": "My Recent ",
+    "project": "Projects",
+    "description": "Here are a few projects I've worked on recently."
+  },
+
+  "aboutSection": {
+    "title": "Know Who ",
+    "subTitle": "I'M?",
+    "description": {
+      "p1": "Hi Everyone, I am ",
+      "name": "Pham Tuan Dat",
+      "p2": " from Hanoi, Vietnam.",
+      "p3": "I am a student majoring in Electronics and Telecommunications at Hanoi University of Science and Technology (HUST) with a deep-seated passion for software development.",
+      "p4": "I love leveraging my technical skills to build meaningful products that bring value to the community.",
+      "p5": "Beyond the world of code, I am also:"
     },
-    "heroSection": {
-        "exp": "My Skill",
-        "cv": "Get Resume"
-    },
-    "introSection": {
-        "about": "About me",
-        "and": "and",
-        "heading1": "I fell in love with programming and I have at least learnt something, I think… 🤷‍♂️",
-        "heading2": "I am fluent in classics like",
-        "heading3": "My field of Interest's are building new",
-        "heading4": "Web Technologies and Products",
-        "heading5": "Whenever possible, I also apply my passion for developing products with"
-    },
-    "experience": {
-        "title": "Experiences"
-    },
-    "skill": {
-        "title": "Skills"
-    }
+    "activities": [
+      "Playing musical instruments (Bamboo flute, Guitar)",
+      "Staying active with Gym and Badminton",
+      "Exploring new technologies"
+    ],
+    "quote": "\"The only way to do great work is to love what you do.\"",
+    "quoteAuthor": "-- Steve Jobs",
+    "education": "Education",
+    "find": "FOLLOW ME",
+    "contact": "Contact me"
+  }
 }

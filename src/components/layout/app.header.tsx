@@ -26,7 +26,17 @@ function AppHeader() {
   };
 
   return (
-    <Navbar data-bs-theme={theme} expand="lg" className="bg-body-tertiary" style={{ zIndex: 1 }}>
+    <Navbar
+      data-bs-theme={theme}
+      expand="lg"
+      style={{
+        zIndex: 1,
+        position: "sticky",
+        top: 0,
+        backdropFilter: "blur(10px)",
+        backgroundColor: theme === "dark" ? "rgba(18, 19, 44, 0.6)" : "rgba(255, 255, 255, 0.6)",
+      }}
+    >
       <Container>
         <Link className="navbar-brand" to="/">
           <span className="brand-green">{t("appHeader.brand")}</span>

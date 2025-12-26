@@ -23,22 +23,22 @@ const HeroLeft = (props: IProps) => {
   const handleDownloadCV = () => {
     openInNewTab("https://drive.google.com/file/d/1u8TE8yoFy8oWMNox8EmPzF9UDDiyHWzj/view?usp=sharing");
   };
-  
+
   return (
     <div className="hero-left">
       <h3>
-        Hi There!{" "}
+        {t("heroSection.greeting")}{" "}
         <span className="wave" role="img" aria-labelledby="wave">
           👋🏻
         </span>
       </h3>
       <h3 style={{ paddingTop: 10, paddingBottom: 5 }}>
-        I'M &nbsp;
+        {t("heroSection.my")}&nbsp;
         <strong className="brand-red">{t("appHeader.brand")}</strong>
       </h3>
       <Typewriter
         options={{
-          strings: ["Software Developer", "Freelancer", "MERN Stack Developer", "Open Source Contributor"],
+          strings: t("heroSection.work", { returnObjects: true }) as string[],
           autoStart: true,
           loop: true,
           deleteSpeed: 50,

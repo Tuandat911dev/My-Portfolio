@@ -1,28 +1,60 @@
 {
-    "appHeader": {
-        "brand": "Phạm Tuấn Đạt",
-        "home": "Trang chủ",
-        "project": "Dự án",
-        "contact": "Liên hệ",
-        "about": "Về tác giả"
+  "appHeader": {
+    "brand": "Phạm Tuấn Đạt",
+    "home": "Trang chủ",
+    "project": "Dự án",
+    "contact": "Liên hệ",
+    "about": "Về tác giả"
+  },
+  "heroSection": {
+    "greeting": "Xin chào!",
+    "my": "Mình là",
+    "exp": "Kinh nghiệm",
+    "cv": "Tải Resume",
+    "work": ["Lập trình viên phần mềm", "Freelancer", "Người chia sẻ kiến thức"]
+  },
+  "introSection": {
+    "about": "Giới thiệu",
+    "and": "và",
+    "heading1": "Bén duyên với lập trình, mình tin rằng bản thân đã tích lũy được ít nhiều điều gì đó thú vị... chắc vậy! 🤷‍♂️",
+    "heading2": "Mình đã có cơ hội được học tập, thực hành và tham gia các dự án sử dụng các công nghệ như",
+    "heading3": "Lĩnh vực mình quan tâm là Công nghệ Web và phát triển các dự án giúp",
+    "heading4": "giải quyết các vấn đề thực tế",
+    "heading5": "Bất cứ khi nào có thể, mình đều cố gắng hiện thực hóa đam mê phát triển sản phẩm thông qua"
+  },
+  "experience": {
+    "title": "Kinh nghiệm làm việc"
+  },
+  "skill": {
+    "title": "Kỹ năng"
+  },
+
+  "projects": {
+    "myRecent": "Các dự án ",
+    "project": "gần đây",
+    "description": "Dưới đây là những dự án tôi đã tham gia phát triển."
+  },
+
+  "aboutSection": {
+    "title": "Mình là ",
+    "subTitle": "ai?",
+    "description": {
+      "p1": "Chào mọi người, mình là ",
+      "name": "Phạm Tuấn Đạt",
+      "p2": " đến từ Hà Nội.",
+      "p3": "Mình hiện là sinh viên ngành Điện tử Viễn thông tại Đại học Bách Khoa Hà Nội (HUST) nhưng lại mang trong mình niềm đam mê mãnh liệt với lập trình phần mềm.",
+      "p4": "Mình thích vận dụng những kỹ năng kỹ thuật để tạo ra các sản phẩm thực tế và hữu ích cho mọi người.",
+      "p5": "Bên cạnh việc 'gõ phím', mình còn là một người:"
     },
-    "heroSection": {
-        "exp": "Kinh nghiệm",
-        "cv": "Tải Resume"
-    },
-    "introSection": {
-        "about": "Giới thiệu",
-        "and": "và",
-        "heading1": "Yêu đơn phương lập trình và tôi tin rằng mình đã học hỏi được ít nhiều điều gì đó. 🤷‍♂️",
-        "heading2": "Tôi nắm vững các ngôn ngữ huyền thoại như là",
-        "heading3": "Lĩnh vực quan tâm của tôi là",
-        "heading4": "xây dựng các công nghệ web mới và các sản phẩm liên quan",
-        "heading5": "Bất cứ khi nào có thể, tôi cũng áp dụng niềm đam mê phát triển sản phẩm của mình với"
-    },
-    "experience": {
-        "title": "Kinh nghiệm làm việc"
-    },
-    "skill": {
-        "title": "Kỹ năng"
-    }
+    "activities": [
+      "Yêu âm nhạc, thích chơi sáo trúc và đàn guitar",
+      "Đam mê thể thao như tập Gym và cầu lông",
+      "Luôn tò mò về các công nghệ mới"
+    ],
+    "quote": "\"Cách duy nhất để tạo nên những điều tuyệt vời là hãy yêu công việc bạn đang làm.\"",
+    "quoteAuthor": "-- Steve Jobs",
+    "education": "Học tập",
+    "find": "Theo dõi mình",
+    "contact": "Liên hệ với mình"
+  }
 }
