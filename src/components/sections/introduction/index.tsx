@@ -5,22 +5,14 @@ import "./introduction.scss";
 import { useTranslation } from "react-i18next";
 
 const Introduction = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <section className="introduction-section my-5 my-md-7" style={{ position: "relative" }}>
       <Row>
         <Col xs={12} md={9}>
           <h2 className="text-center text-md-start">
-            {i18n.resolvedLanguage === "en" ? (
-              <>
-                LET ME <span className="text-pink-100"> INTRODUCE </span> MYSELF
-              </>
-            ) : (
-              <>
-                <span className="text-pink-100">GIỚI THIỆU</span> BẢN THÂN
-              </>
-            )}
+            <span className="text-pink-100"> {t("introSection.introduce")} </span> {t("introSection.myself")}
           </h2>
           <br />
           <p>

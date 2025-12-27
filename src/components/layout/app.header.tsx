@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { NavDropdown } from "react-bootstrap";
 import viFlag from "assets/svg/language/vi.svg";
 import enFlag from "assets/svg/language/en.svg";
+import jpFlag from "assets/svg/language/jp.svg";
 
 type ThemeContextType = "light" | "dark";
 
@@ -22,7 +23,12 @@ function AppHeader() {
   };
 
   const renderFlag = (language: string) => {
-    return <img style={{ height: 20, width: 20 }} src={language === "en" ? enFlag : viFlag} alt={language} />;
+    if (language === "en") {
+      return <img style={{ height: 20, width: 20 }} src={enFlag} alt={language} />;
+    } else if (language === "vi") {
+      return <img style={{ height: 20, width: 20 }} src={viFlag} alt={language} />;
+    }
+    return <img style={{ height: 20, width: 20 }} src={jpFlag} alt={language} />;
   };
 
   return (
@@ -30,7 +36,7 @@ function AppHeader() {
       data-bs-theme={theme}
       expand="lg"
       style={{
-        zIndex: 1,
+        zIndex: 100,
         position: "sticky",
         top: 0,
         backdropFilter: "blur(10px)",
@@ -64,7 +70,7 @@ function AppHeader() {
               )}
             </div>
 
-            <NavDropdown title={renderFlag(i18n.resolvedLanguage!)}>
+            <NavDropdown title={renderFlag(i18n.resolvedLanguage!)} align="end">
               <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <div
                   onClick={() => i18n.changeLanguage("en")}
@@ -84,6 +90,17 @@ function AppHeader() {
                 >
                   <img style={{ height: 20, width: 20 }} src={viFlag} alt="vietnamese" />
                   <span>Tiếng Việt</span>
+                </div>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
+                <div
+                  onClick={() => i18n.changeLanguage("jp")}
+                  className="dropdown-item d-flex gap-2 align-items-center"
+                  style={{ cursor: "pointer" }}
+                >
+                  <img style={{ height: 20, width: 20 }} src={jpFlag} alt="japanese" />
+                  <span>日本語</span>
                 </div>
               </NavDropdown.Item>
             </NavDropdown>
