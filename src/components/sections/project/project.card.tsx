@@ -20,13 +20,21 @@ function ProjectCard(props: IProps) {
         <div className="d-flex flex-column justify-content-between h-100">
           <Card.Text style={{ textAlign: "justify" }}>{props.description}</Card.Text>
           <div>
-            <Button variant="primary" href={props.githubLink} target="_blank">
-              <BsGithub /> &nbsp; "GitHub"
+            <Button href={props.githubLink} target="_blank" style={{ backgroundColor: "#ec4899", border: "none" }}>
+              <div className="d-flex justify-content-center align-items-center" style={{ gap: 10 }}>
+                <BsGithub /> {"Github"}
+              </div>
             </Button>
 
-            <Button variant="primary" href={props.demoLink} target="_blank" style={{ marginLeft: "10px" }}>
-              <CgWebsite /> &nbsp;
-              {"Demo"}
+            <Button
+              href={props.demoLink}
+              target="_blank"
+              style={{ marginLeft: "10px", backgroundColor: "#ec4899", border: "none" }}
+            >
+              <div className="d-flex justify-content-center align-items-center" style={{ gap: 10 }}>
+                <CgWebsite />
+                {"Demo"}
+              </div>
             </Button>
           </div>
         </div>
