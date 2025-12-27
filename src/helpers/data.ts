@@ -16,47 +16,55 @@ export const EXPERIENCES = [
   {
     id: 1,
     title: {
-      vi: "Lập Trình Viên",
-      en: "Fullstack Developer",
+      vi: "Phát triển dự án cá nhân",
+      en: "Personal Project Development",
+      jp: "個人プロジェクト開発",
     },
     company: {
-      vi: "Công ty ABCXYZ Ltd.",
-      en: "ABCXYZ Ltd.",
+      vi: "Tự học và xây dựng sản phẩm",
+      en: "Self-study and Building Products",
+      jp: "独学・サービス開発",
     },
     duration: {
-      vi: "Jan 2024 - Hiện tại",
-      en: "Jan 2024 - Present",
+      vi: "Tháng 06/2025 - Hiện tại",
+      en: "Jun 2025 - Present",
+      jp: "2025年6月 - 現在",
     },
   },
   {
     id: 2,
     title: {
-      vi: "Lập Trình Viên",
-      en: "Fullstack Developer",
+      vi: "Thực tập sinh Fullstack",
+      en: "Fullstack Developer Intern",
+      jp: "フルスタックエンジニア インターン",
     },
-
     company: {
-      vi: "Công ty F (freelancer)",
-      en: "F (freelancer)",
+      vi: "Công ty Kiai Soft",
+      en: "Kiai Soft",
+      jp: "株式会社Kiai Soft",
     },
     duration: {
-      vi: "Tháng 6/2022 - Tháng 1/2024",
-      en: "Jun 2022 - Jan 2024",
+      vi: "Tháng 02/2025 - Tháng 06/2025",
+      en: "Feb 2025 - Jun 2025",
+      jp: "2025年2月 - 2025年6月",
     },
   },
   {
     id: 3,
     title: {
-      vi: "Dự án tự làm",
-      en: "Self Employed",
+      vi: "Thực tập sinh Backend",
+      en: "Backend Developer Intern",
+      jp: "バックエンドエンジニア インターン",
     },
     company: {
-      vi: "Học kiến thức mới mỗi ngày",
-      en: "Code and build something in everyday.",
+      vi: "Trung tâm phần mềm BKS - BKACAD",
+      en: "BKS Software Center - BKACAD",
+      jp: "BKSソフトウェアセンター - BKACAD",
     },
     duration: {
-      vi: "Tháng 1/2020 - Hiện tại",
-      en: "Jan 2020 - Present",
+      vi: "Tháng 07/2024 - Tháng 01/2025",
+      en: "Jul 2024 - Jpn 2025",
+      jp: "2024年7月 - 2025年1月",
     },
   },
 ];
@@ -76,20 +84,20 @@ export const PROJECTS = [
   {
     id: 2,
     imgPath: springRestImg,
-    title: "Java Spring REST",
+    title: "Jpva Spring REST",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "https://hoidanit.vn/khoa-hoc/java-spring-rest-ultimate-for-beginners-6631cb577353ab6861b188f6.html",
-    demoLink: "https://hoidanit.vn/khoa-hoc/java-spring-rest-ultimate-for-beginners-6631cb577353ab6861b188f6.html",
+    githubLink: "https://hoidanit.vn/khoa-hoc/jpva-spring-rest-ultimate-for-beginners-6631cb577353ab6861b188f6.html",
+    demoLink: "https://hoidanit.vn/khoa-hoc/jpva-spring-rest-ultimate-for-beginners-6631cb577353ab6861b188f6.html",
   },
   {
     id: 3,
     imgPath: springMvcImg,
-    title: "Java Spring MVC",
+    title: "Jpva Spring MVC",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "https://hoidanit.vn/khoa-hoc/java-spring-mvc-ultimate-for-beginners-65ce0b770c05f4450fbd86ac.html",
-    demoLink: "https://hoidanit.vn/khoa-hoc/java-spring-mvc-ultimate-for-beginners-65ce0b770c05f4450fbd86ac.html",
+    githubLink: "https://hoidanit.vn/khoa-hoc/jpva-spring-mvc-ultimate-for-beginners-65ce0b770c05f4450fbd86ac.html",
+    demoLink: "https://hoidanit.vn/khoa-hoc/jpva-spring-mvc-ultimate-for-beginners-65ce0b770c05f4450fbd86ac.html",
   },
   {
     id: 4,
@@ -128,21 +136,19 @@ export const SKILLS_DATA = [
   "Javascript",
   "Typescript",
   "React",
+  "Vue",
   "Next JS",
   "Tailwind",
   "MongoDB",
   "MySQL",
   "PostgreSQL",
   "Git",
-  "AWS",
   "Bootstrap",
   "Docker",
-  "Go",
-  "Figma",
-  "Firebase",
-  "MaterialUI",
-  "Nginx",
-  "Strapi",
+  "Java",
+  "Spring",
+  "PHP",
+  "Laravel",
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
@@ -186,7 +192,7 @@ export const SKILLS_DATA = [
     C++
     C#
     Python
-    Java
+    Jpva
     Julia
     Matlab
     Swift
@@ -215,7 +221,7 @@ export const SKILLS_DATA = [
     Premiere Pro
     Adobe Audition
     Deno
-    Django
+    Djpngo
     Gimp
     Graphql
     Lightroom

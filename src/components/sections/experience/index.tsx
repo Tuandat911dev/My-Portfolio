@@ -13,13 +13,12 @@ const Experience = () => {
   const { t, i18n } = useTranslation();
 
   const currentLanguage = () => {
-    console.log(i18n.resolvedLanguage);
     if (i18n.resolvedLanguage === "vi") {
       return "vi";
     } else if (i18n.resolvedLanguage === "en") {
       return "en";
     }
-    return "vi";
+    return "jp";
   };
 
   return (
