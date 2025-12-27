@@ -63,7 +63,7 @@ const GlowCard = ({ children, identifier }: IProps) => {
   }, [identifier]);
 
   return (
-    <div className={`glow-container-${identifier} glow-container`}>
+    <div className={`glow-container-${identifier} glow-container`} data-aos="zoom-in-up">
       <article className={`glow-card glow-card-${identifier}`}>
         <div className="glows"></div>
         {children}

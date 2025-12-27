@@ -11,11 +11,11 @@ const Introduction = () => {
     <section className="introduction-section my-5 my-md-7" style={{ position: "relative" }}>
       <Row>
         <Col xs={12} md={9}>
-          <h2 className="text-center text-md-start">
+          <h2 className="text-center text-md-start" data-aos="flip-up">
             <span className="text-pink-100"> {t("introSection.introduce")} </span> {t("introSection.myself")}
           </h2>
           <br />
-          <p>
+          <p data-aos="fade-up">
             {t("introSection.heading1")}
             <br />
             <br />
@@ -43,7 +43,7 @@ const Introduction = () => {
         </Col>
         <Col md={3} className="d-md-block d-none">
           <Tilt>
-            <img src={avatarImg} className="avatar-img img-fluid" alt="avatar" />
+            <img src={avatarImg} className="avatar-img img-fluid" alt="avatar" data-aos="flip-left" />
           </Tilt>
         </Col>
       </Row>

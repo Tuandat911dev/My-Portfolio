@@ -10,19 +10,21 @@ const Project = () => {
     <>
       <Row>
         <Col xs={12}>
-          <h3 className="text-center">
+          <h3 className="text-center" data-aos="flip-up">
             {t("projects.myRecent")} <span className="brand-red">{t("projects.project")}</span>{" "}
           </h3>
-          <h6 className="text-center mb-md-5 mb-2">{t("projects.description")}</h6>
+          <h6 className="text-center mb-md-5 mb-2" data-aos="fade-up">
+            {t("projects.description")}
+          </h6>
         </Col>
       </Row>
       <Row
-        className="row-cols-xl-3 row-cols-md-2 row-cols-1"
+        className="row-cols-xl-3 row-cols-md-2 row-cols-1 gy-5"
         style={{ justifyContent: "center", paddingBottom: "10px" }}
       >
         {PROJECTS?.map((item) => {
           return (
-            <Col className="project-card" key={item.id}>
+            <Col className="project- " key={item.id}>
               <ProjectCard
                 imgPath={item.imgPath}
                 title={item.title}

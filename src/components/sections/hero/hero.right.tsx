@@ -2,7 +2,7 @@ import "./hero.scss";
 
 const HeroRight = () => {
   return (
-    <div className="hero-right">
+    <div className="hero-right" data-aos="fade-up-left">
       <div className="border-top"></div>
       <div className="first">
         <div className="circle bg-first"></div>

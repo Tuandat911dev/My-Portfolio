@@ -18,25 +18,25 @@ const About = () => {
     <>
       <Row>
         <Col md={6} xs={12}>
-          <h3 className="text-center mb-md-5 mb-2">
+          <h3 className="text-center mb-md-5 mb-2" data-aos="fade-left">
             {t("aboutSection.title")}
             <span className="brand-red">{t("aboutSection.subTitle")}</span>{" "}
           </h3>
           <div>
             <div>
-              <p>
+              <p data-aos="fade-up">
                 {" "}
                 {t("aboutSection.description.p1")}
                 <span className="brand-red">{t("aboutSection.description.name")}</span>
                 {t("aboutSection.description.p2")}
               </p>
-              <p> {t("aboutSection.description.p3")}</p>
-              <p> {t("aboutSection.description.p4")}</p>
+              <p data-aos="fade-up"> {t("aboutSection.description.p3")}</p>
+              <p data-aos="fade-up"> {t("aboutSection.description.p4")}</p>
             </div>
           </div>
           <div>
-            <p>{t("aboutSection.description.p5")}</p>
-            <ul>
+            <p data-aos="fade-up">{t("aboutSection.description.p5")}</p>
+            <ul data-aos="fade-up">
               {Array.isArray(activities) &&
                 activities.map((activity, index) => (
                   <li key={index} className="about-activity">
@@ -45,18 +45,23 @@ const About = () => {
                 ))}
             </ul>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <p className="text-center brand-red">{t("aboutSection.quote")}</p>
             <p className="text-center brand-red">{t("aboutSection.quoteAuthor")}</p>
           </div>
         </Col>
-        <Col md={6} xs={12} className="d-flex align-items-center justify-content-center">
+        <Col md={6} xs={12} className="d-flex align-items-center justify-content-center" data-aos="zoom-in-left">
           <AnimationLottie width="80%" animationPath={codingJSON} />
         </Col>
       </Row>
 
       <Row>
-        <Col md={6} xs={12} className="d-none d-md-flex align-items-center justify-content-center mt-md-5 mt-3">
+        <Col
+          md={6}
+          xs={12}
+          className="d-none d-md-flex align-items-center justify-content-center mt-md-5 mt-3"
+          data-aos="flip-right"
+        >
           <AnimationLottie
             width="50%"
             //animation with rp => convert sang text
@@ -67,7 +72,9 @@ const About = () => {
         <Col md={6} xs={12} className="mt-md-5 mt-3">
           <div className="d-flex flex-column align-items-center gap-3">
             <div>
-              <h4 className="text-center brand-red">{t("aboutSection.education")}</h4>
+              <h4 className="text-center brand-red" data-aos="fade-up">
+                {t("aboutSection.education")}
+              </h4>
             </div>
             <div>
               <GlowCard identifier={`experience-5`}>
@@ -96,15 +103,20 @@ const About = () => {
       <Divider />
       <Row>
         <Col md={6} xs={12} className=" mt-md-5 mt-3">
-          <h3 className="mb-md-5 mb-2">{t("aboutSection.find")}</h3>
-          <SocialMedia
-            gmail={APP_DATA.GMAIL_URL}
-            github={APP_DATA.GITHUB_URL}
-            linkedin={APP_DATA.LINKED_URL}
-            facebook={APP_DATA.FACEBOOK_URL}
-          />
+          <h3 className="mb-md-5 mb-2" data-aos="fade-left">
+            {t("aboutSection.find")}
+          </h3>
+
+          <div data-aos="fade-right">
+            <SocialMedia
+              gmail={APP_DATA.GMAIL_URL}
+              github={APP_DATA.GITHUB_URL}
+              linkedin={APP_DATA.LINKED_URL}
+              facebook={APP_DATA.FACEBOOK_URL}
+            />
+          </div>
         </Col>
-        <Col md={6} xs={12} className="d-flex flex-column align-items-center justify-content-center">
+        <Col md={6} xs={12} className="d-flex flex-column align-items-center justify-content-center" data-aos="fade-up">
           <AnimationLottie
             width="50%"
             //animation with rp => convert sang text

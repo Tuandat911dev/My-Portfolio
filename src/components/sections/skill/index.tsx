@@ -12,11 +12,11 @@ const Skill = () => {
   return (
     <Row className="skills-container">
       <Col xs={12} className="my-3 my-md-5">
-        <div className="text-center">
+        <div className="text-center" data-aos="fade-up">
           <h3>{t("skill.title")}</h3>
         </div>
       </Col>
-      <Col xs={12} className="skills-marquee">
+      <Col xs={12} className="skills-marquee" data-aos="flip-down">
         <Swiper
           slidesPerView={7}
           spaceBetween={5}

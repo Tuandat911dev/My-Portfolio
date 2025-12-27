@@ -25,10 +25,10 @@ const Experience = () => {
     <Row className="mb-5">
       <Col xs={12} className="my-3 my-md-5">
         <div className="text-center">
-          <h3>{t("experience.title")}</h3>
+          <h3 data-aos="fade-up">{t("experience.title")}</h3>
         </div>
       </Col>
-      <Col md={6} xs={12} className="d-flex align-items-center justify-content-center">
+      <Col md={6} xs={12} className="d-flex align-items-center justify-content-center" data-aos="fade-right">
         <AnimationLottie animationPath={experienceJSON} />
       </Col>
       <Col md={6} xs={12}>
