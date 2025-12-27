@@ -51,7 +51,7 @@ function AppHeader() {
     >
       <Container>
         <Link className="navbar-brand" to="/">
-          <span className="brand-green">{t("appHeader.brand")}</span>
+          <span className="brand-green">Pham Tuan Dat</span>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav border-0 shadow-none" style={{ outline: "none" }} />
         <Navbar.Collapse id="basic-navbar-nav">
