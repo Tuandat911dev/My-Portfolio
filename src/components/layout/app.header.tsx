@@ -1,34 +1,25 @@
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { MdOutlineLightMode, MdNightlight } from "react-icons/md";
+import { MdOutlineLightMode, MdNightlight, MdMenu, MdClose } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { useCurrentApp } from "components/context/app.context";
 import { useTranslation } from "react-i18next";
-import { NavDropdown } from "react-bootstrap";
 import viFlag from "assets/svg/language/vi.svg";
 import enFlag from "assets/svg/language/en.svg";
 import jpFlag from "assets/svg/language/jp.svg";
-
-type ThemeContextType = "light" | "dark";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import avatarImg from "assets/avatar.svg";
 
 function AppHeader() {
   const { theme, setTheme } = useCurrentApp();
   const { t, i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleMode = (mode: ThemeContextType) => {
+  const handleMode = (mode: "light" | "dark") => {
     localStorage.setItem("theme", mode);
     document.documentElement.setAttribute("data-bs-theme", mode);
     setTheme(mode);
-  };
-
-  const renderFlag = (language: string) => {
-    if (language === "en") {
-      return <img style={{ height: 20, width: 20 }} src={enFlag} alt={language} />;
-    } else if (language === "vi") {
-      return <img style={{ height: 20, width: 20 }} src={viFlag} alt={language} />;
-    }
-    return <img style={{ height: 20, width: 20 }} src={jpFlag} alt={language} />;
   };
 
   const languages = [
@@ -38,62 +29,84 @@ function AppHeader() {
   ];
 
   return (
-    <Navbar
-      data-bs-theme={theme}
-      expand="lg"
-      style={{
-        zIndex: 100,
-        position: "sticky",
-        top: 0,
-        backdropFilter: "blur(15px)",
-        backgroundColor: theme === "dark" ? "rgba(18, 19, 44, 0.6)" : "rgba(255, 255, 255, 0.6)",
-      }}
-    >
-      <Container>
-        <Link className="navbar-brand" to="/">
-          <span className="brand-green">Pham Tuan Dat</span>
-        </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav border-0 shadow-none" style={{ outline: "none" }} />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavLink className="nav-link" to="/">
-              {t("appHeader.home")}
-            </NavLink>
-            <NavLink className="nav-link" to="/project">
-              {" "}
-              {t("appHeader.project")}
-            </NavLink>
-            <NavLink className="nav-link" to="/about">
-              {t("appHeader.about")}
-            </NavLink>
-          </Nav>
-          <Nav className="ms-auto">
-            <div className="nav-link" style={{ cursor: "pointer" }}>
-              {theme === "light" ? (
-                <MdOutlineLightMode onClick={() => handleMode("dark")} style={{ fontSize: 20 }} />
-              ) : (
-                <MdNightlight onClick={() => handleMode("light")} style={{ fontSize: 20 }} />
-              )}
-            </div>
+    <>
+      <header className={`main-header ${theme}`}>
+        <Container>
+          <Navbar expand={false} className="py-3">
+            <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
+              <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="brand-text">
+                Pham Tuan Dat
+              </motion.span>
+            </Link>
 
-            <NavDropdown title={renderFlag(i18n.resolvedLanguage!)} align="end">
-              {languages.map((lang) => (
-                <NavDropdown.Item key={lang.code} style={{ padding: 0 }}>
-                  <div
-                    onClick={() => i18n.changeLanguage(lang.code)}
-                    className="dropdown-item d-flex gap-2 align-items-center"
-                    style={{ cursor: "pointer" }}
-                  >
-                    <img style={{ height: 20, width: 20 }} src={lang.flag} alt={lang.label} />
-                    <span>{lang.label}</span>
-                  </div>
-                </NavDropdown.Item>
-              ))}
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+            <div className="d-flex align-items-center gap-3">
+              <div className="theme-toggle" onClick={() => handleMode(theme === "light" ? "dark" : "light")}>
+                {theme === "light" ? <MdNightlight /> : <MdOutlineLightMode />}
+              </div>
+
+              <button className="menu-btn" onClick={() => setIsOpen(true)}>
+                <MdMenu size={28} />
+              </button>
+            </div>
+          </Navbar>
+        </Container>
+      </header>
+
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.div
+              className="drawer-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div
+              className="custom-drawer"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            >
+              <div className="drawer-header">
+                <img src={avatarImg} alt="Avatar" className="drawer-avatar" />
+                <button className="close-btn" onClick={() => setIsOpen(false)}>
+                  <MdClose size={30} />
+                </button>
+              </div>
+
+              <nav className="drawer-nav">
+                <NavLink to="/" className="drawer-link" onClick={() => setIsOpen(false)}>
+                  {t("appHeader.home")}
+                </NavLink>
+                <NavLink to="/project" className="drawer-link" onClick={() => setIsOpen(false)}>
+                  {t("appHeader.project")}
+                </NavLink>
+                <NavLink to="/about" className="drawer-link" onClick={() => setIsOpen(false)}>
+                  {t("appHeader.about")}
+                </NavLink>
+              </nav>
+
+              <div className="drawer-footer">
+                <p>{t("drawer.select")}</p>
+                <div className="lang-grid">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => i18n.changeLanguage(lang.code)}
+                      className={`lang-item ${i18n.resolvedLanguage === lang.code ? "active" : ""}`}
+                    >
+                      <img src={lang.flag} width={24} alt={lang.code} />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
 

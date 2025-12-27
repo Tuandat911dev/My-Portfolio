@@ -299,3 +299,203 @@ body {
 //     font-weight: 500 !important;
 //     padding-top: 10px !important;
 // }
+
+// header
+.navbar-toggler {
+  border: none;
+  outline: none;
+  padding: 0;
+
+  &:focus {
+    box-shadow: unset;
+  }
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--card-border);
+  transition: background 0.3s ease;
+
+  &.dark {
+    background: rgba(13, 18, 36, 0.7);
+  }
+  &.light {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .brand-text {
+    font-weight: 800;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #16f2b3, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.menu-btn,
+.theme-toggle {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--drawer-text);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: #ec4899;
+    color: #ec4899;
+  }
+}
+
+/* CUSTOM DRAWER STYLES */
+.custom-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  z-index: 2001;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--drawer-bg) !important;
+  color: var(--drawer-text) !important;
+  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.3);
+  border-left: 1px solid var(--card-border);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .drawer-avatar {
+      width: 55px;
+      object-fit: cover;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--drawer-text);
+      font-size: 24px;
+      transition: 0.2s;
+      &:hover {
+        color: #ec4899;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .drawer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .drawer-link {
+      color: var(--drawer-text-sub);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 12px 15px;
+      transition: all 0.3s ease;
+      display: block;
+
+      &:hover,
+      &.active {
+        color: #ec4899 !important;
+        background: rgba(236, 72, 153, 0.08);
+        border-radius: 12px;
+        padding-left: 25px;
+      }
+    }
+  }
+
+  .drawer-footer {
+    margin-top: auto;
+    border-top: 1px solid var(--card-border);
+    padding-top: 25px;
+
+    p {
+      color: var(--drawer-text-sub);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+
+      .lang-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 8px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        img {
+          width: 24px;
+          height: 24px;
+          object-fit: cover;
+          border-radius: 4px;
+          filter: grayscale(40%);
+        }
+
+        span {
+          font-size: 0.75rem;
+          font-weight: 500;
+          color: var(--drawer-text-sub);
+        }
+
+        &.active {
+          border-color: #ec4899;
+          background: rgba(236, 72, 153, 0.05);
+
+          img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+          }
+
+          span {
+            color: #ec4899;
+            font-weight: 700;
+          }
+        }
+
+        &:hover:not(.active) {
+          border-color: rgba(236, 72, 153, 0.5);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+/* OVERLAY */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+}

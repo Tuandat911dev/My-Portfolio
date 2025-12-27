@@ -1,4 +1,7 @@
 {
+  "drawer": {
+    "select": "SELECT LANGUAGE"
+  },
   "appHeader": {
     "brand": "Pham Tuan Dat",
     "home": "Home",

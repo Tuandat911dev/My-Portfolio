@@ -39,6 +39,10 @@ $light-theme: (
   card-bg: #ffffff,
   card-border: #e5e7eb,
   card-border-hover: #db2777,
+
+  drawer-bg: #ffffff,
+  drawer-text-main: #111827,
+  drawer-text-sub: #4b5563,
 );
 
 $dark-theme: (
@@ -79,6 +83,10 @@ $dark-theme: (
   card-bg: rgba(255, 255, 255, 0.05),
   card-border: rgba(255, 255, 255, 0.1),
   card-border-hover: #ec4899,
+
+  drawer-bg: #111827,
+  drawer-text-main: #ffffff,
+  drawer-text-sub: #9ca3af,
 );
 
 :root {
@@ -92,4 +100,3 @@ $dark-theme: (
     --#{$name}: #{$color};
   }
 }
-

@@ -1,4 +1,7 @@
 {
+  "drawer": {
+    "select": "CHỌN NGÔN NGỮ"
+  },
   "appHeader": {
     "brand": "Phạm Tuấn Đạt",
     "home": "Trang chủ",

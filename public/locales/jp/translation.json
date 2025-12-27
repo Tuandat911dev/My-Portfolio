@@ -1,4 +1,7 @@
 {
+  "drawer": {
+    "select": "言語選択"
+  },
   "appHeader": {
     "brand": "ファム・トゥアン・ダット (Pham Tuan Dat)",
     "home": "ホーム",
