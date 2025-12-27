@@ -366,7 +366,8 @@ body {
   padding: 40px 30px;
   display: flex;
   flex-direction: column;
-
+  will-change: transform;
+  transform: translateZ(0);
   background-color: var(--drawer-bg) !important;
   color: var(--drawer-text) !important;
   box-shadow: -15px 0 50px rgba(0, 0, 0, 0.3);
@@ -389,7 +390,7 @@ body {
       border: none;
       color: var(--drawer-text);
       font-size: 24px;
-      transition: 0.2s;
+      transition: 0.3s;
       &:hover {
         color: #ec4899;
         transform: rotate(90deg);
@@ -497,5 +498,5 @@ body {
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
-  z-index: 2000;
+  z-index: 200;
 }

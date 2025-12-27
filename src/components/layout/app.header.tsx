@@ -67,7 +67,11 @@ function AppHeader() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{
+                type: "tween",
+                duration: 0.3,
+                ease: "linear",
+              }}
             >
               <div className="drawer-header">
                 <img src={avatarImg} alt="Avatar" className="drawer-avatar" />
