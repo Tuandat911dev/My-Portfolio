@@ -31,6 +31,12 @@ function AppHeader() {
     return <img style={{ height: 20, width: 20 }} src={jpFlag} alt={language} />;
   };
 
+  const languages = [
+    { code: "en", label: "English", flag: enFlag },
+    { code: "vi", label: "Tiếng Việt", flag: viFlag },
+    { code: "jp", label: "日本語", flag: jpFlag },
+  ];
+
   return (
     <Navbar
       data-bs-theme={theme}
@@ -39,7 +45,7 @@ function AppHeader() {
         zIndex: 100,
         position: "sticky",
         top: 0,
-        backdropFilter: "blur(10px)",
+        backdropFilter: "blur(15px)",
         backgroundColor: theme === "dark" ? "rgba(18, 19, 44, 0.6)" : "rgba(255, 255, 255, 0.6)",
       }}
     >
@@ -47,7 +53,7 @@ function AppHeader() {
         <Link className="navbar-brand" to="/">
           <span className="brand-green">{t("appHeader.brand")}</span>
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav border-0 shadow-none" style={{ outline: "none" }} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavLink className="nav-link" to="/">
@@ -71,38 +77,18 @@ function AppHeader() {
             </div>
 
             <NavDropdown title={renderFlag(i18n.resolvedLanguage!)} align="end">
-              <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
-                <div
-                  onClick={() => i18n.changeLanguage("en")}
-                  className="dropdown-item d-flex gap-2 align-items-center"
-                  style={{ cursor: "pointer" }}
-                >
-                  <img style={{ height: 20, width: 20 }} src={enFlag} alt="english" />
-                  <span>English</span>
-                </div>
-              </NavDropdown.Item>
-
-              <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
-                <div
-                  onClick={() => i18n.changeLanguage("vi")}
-                  className="dropdown-item d-flex gap-2 align-items-center"
-                  style={{ cursor: "pointer" }}
-                >
-                  <img style={{ height: 20, width: 20 }} src={viFlag} alt="vietnamese" />
-                  <span>Tiếng Việt</span>
-                </div>
-              </NavDropdown.Item>
-
-              <NavDropdown.Item style={{ paddingLeft: 0, paddingRight: 0 }}>
-                <div
-                  onClick={() => i18n.changeLanguage("jp")}
-                  className="dropdown-item d-flex gap-2 align-items-center"
-                  style={{ cursor: "pointer" }}
-                >
-                  <img style={{ height: 20, width: 20 }} src={jpFlag} alt="japanese" />
-                  <span>日本語</span>
-                </div>
-              </NavDropdown.Item>
+              {languages.map((lang) => (
+                <NavDropdown.Item key={lang.code} style={{ padding: 0 }}>
+                  <div
+                    onClick={() => i18n.changeLanguage(lang.code)}
+                    className="dropdown-item d-flex gap-2 align-items-center"
+                    style={{ cursor: "pointer" }}
+                  >
+                    <img style={{ height: 20, width: 20 }} src={lang.flag} alt={lang.label} />
+                    <span>{lang.label}</span>
+                  </div>
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

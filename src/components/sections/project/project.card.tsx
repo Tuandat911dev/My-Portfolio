@@ -14,28 +14,26 @@ interface IProps {
 function ProjectCard(props: IProps) {
   return (
     <Card className="project-card-view">
-      <Card.Img variant="top" src={props.imgPath} alt="card-img" style={{ maxHeight: 215 }} />
+      <div className="card-img-wrapper">
+        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+      </div>
+
       <Card.Body className="d-flex flex-column">
-        <Card.Title>{props.title}</Card.Title>
+        <Card.Title className="project-title">{props.title}</Card.Title>
+
         <div className="d-flex flex-column justify-content-between h-100">
-          <Card.Text style={{ textAlign: "justify" }}>{props.description}</Card.Text>
-          <div>
-            <Button href={props.githubLink} target="_blank" style={{ backgroundColor: "#ec4899", border: "none" }}>
-              <div className="d-flex justify-content-center align-items-center" style={{ gap: 10 }}>
-                <BsGithub /> {"Github"}
-              </div>
+          <Card.Text className="project-description">{props.description}</Card.Text>
+
+          <div className="project-btn-group">
+            <Button href={props.githubLink} target="_blank" className="btn-primary-custom">
+              <BsGithub /> <span>Github</span>
             </Button>
 
-            <Button
-              href={props.demoLink}
-              target="_blank"
-              style={{ marginLeft: "10px", backgroundColor: "#ec4899", border: "none" }}
-            >
-              <div className="d-flex justify-content-center align-items-center" style={{ gap: 10 }}>
-                <CgWebsite />
-                {"Demo"}
-              </div>
-            </Button>
+            {props.demoLink && (
+              <Button href={props.demoLink} target="_blank" className="btn-primary-custom">
+                <CgWebsite /> <span>Demo</span>
+              </Button>
+            )}
           </div>
         </div>
       </Card.Body>

@@ -154,15 +154,82 @@ body {
 }
 
 .project-card-view {
-  box-shadow: 0 3px 3px 3px var(--border-hero-right);
-  color: var(--text-white);
-  background-color: transparent !important;
-  opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-title);
+
+  backdrop-filter: blur(10px);
+  border-radius: 20px !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  overflow: hidden;
+  height: 100%;
+
+  & .card-img-wrapper {
+    height: 230px;
+    overflow: hidden;
+  }
+
+  & img {
+    height: 230px !important;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
 
   &:hover {
-    border-color: var(--brand-social);
+    transform: translateY(-5px);
+    border: 1px solid var(--card-border-hover) !important;
+    box-shadow: 0 15px 30px rgba(236, 72, 153, 0.2) !important;
+
+    & img {
+      transform: scale(1.05);
+    }
+  }
+
+  .project-title {
+    color: var(--text-title) !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .project-description {
+    color: var(--text-description) !important;
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px !important;
+  }
+
+  .project-btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+  }
+
+  .btn-primary-custom {
+    background-color: var(--btn-bg) !important;
+    color: var(--btn-text) !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 8px 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    flex: 1;
+    text-decoration: none !important;
+
+    &:hover {
+      filter: brightness(0.9);
+      box-shadow: 0 0 15px rgba(236, 72, 153, 0.6) !important;
+      transform: scale(1.05);
+    }
+
+    & span {
+      font-size: 0.9rem;
+    }
   }
 }
 
