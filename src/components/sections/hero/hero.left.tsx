@@ -15,15 +15,6 @@ const HeroLeft = (props: IProps) => {
   const { scrollToExperienceSection } = props;
   const { t } = useTranslation();
 
-  const openInNewTab = (url: string): void => {
-    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.opener = null;
-  };
-
-  const handleDownloadCV = () => {
-    openInNewTab("https://drive.google.com/file/d/1u8TE8yoFy8oWMNox8EmPzF9UDDiyHWzj/view?usp=sharing");
-  };
-
   return (
     <div className="hero-left">
       <h3 data-aos="fade-right">
@@ -67,7 +58,20 @@ const HeroLeft = (props: IProps) => {
             color: "var(--text-white-1)",
           }}
         />
-        <ResizeButton onClick={handleDownloadCV} btnText={t("heroSection.cv")} btnIcons={<MdFileDownload />} />
+
+        <ResizeButton onClick={() => scrollToExperienceSection()}>
+          <a
+            href="/assets/document/demo_cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "inherit", textDecoration: "none", textTransform: "uppercase" }}
+          >
+            {t("heroSection.cv")}
+          </a>
+          <>
+            <MdFileDownload />
+          </>
+        </ResizeButton>
       </div>
     </div>
   );
