@@ -10,7 +10,7 @@ const ResizeButton = (props: IProps) => {
   const { btnStyle, onClick, children, btnText, btnIcons } = props;
 
   return (
-    <button className="resize-button" style={btnStyle} onClick={onClick}>
+    <span className="resize-button" style={btnStyle} onClick={onClick}>
       {children === undefined ? (
         <>
           <span style={{ textTransform: "uppercase" }}>{btnText}</span>
@@ -19,7 +19,7 @@ const ResizeButton = (props: IProps) => {
       ) : (
         children
       )}
-    </button>
+    </span>
   );
 };
 
