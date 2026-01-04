@@ -13,7 +13,7 @@ interface IProps {
 
 function ProjectCard(props: IProps) {
   return (
-    <Card className="project-card-view" data-aos="fade-up">
+    <Card className="project-card-view">
       <div className="card-img-wrapper">
         <Card.Img variant="top" src={props.imgPath} alt="card-img" />
       </div>
