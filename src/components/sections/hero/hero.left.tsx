@@ -59,7 +59,7 @@ const HeroLeft = (props: IProps) => {
           }}
         />
 
-        <ResizeButton onClick={() => scrollToExperienceSection()}>
+        <ResizeButton>
           <a
             href="/assets/document/demo_cv.pdf"
             target="_blank"
