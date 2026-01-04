@@ -59,19 +59,18 @@ const HeroLeft = (props: IProps) => {
           }}
         />
 
-        <ResizeButton>
-          <a
-            href="/assets/document/demo_cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "inherit", textDecoration: "none", textTransform: "uppercase" }}
-          >
-            {t("heroSection.cv")}
-          </a>
-          <>
-            <MdFileDownload />
-          </>
-        </ResizeButton>
+        <a
+          href="/assets/document/demo_cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "inherit", textDecoration: "none", textTransform: "uppercase" }}
+        >
+          <ResizeButton
+            btnText={t("heroSection.cv")}
+            btnIcons={<MdFileDownload />}
+            btnStyle={{ color: "inherit", textDecoration: "none", textTransform: "uppercase" }}
+          />
+        </a>
       </div>
     </div>
   );
