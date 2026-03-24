@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Badge from "react-bootstrap/Badge";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
@@ -9,13 +10,43 @@ interface IProps {
   description: string;
   githubLink: string;
   demoLink: string;
+  status?: "Developing" | "Active" | "Maintenance";
 }
 
 function ProjectCard(props: IProps) {
+  const getStatusColor = (status?: string) => {
+    switch (status) {
+      case "Active":
+        return "success";
+      case "Developing":
+        return "warning";
+      case "Maintenance":
+        return "secondary";
+      default:
+        return "info";
+    }
+  };
+
   return (
     <Card className="project-card-view">
-      <div className="card-img-wrapper">
+      <div className="card-img-wrapper" style={{ position: "relative" }}>
         <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+
+        {props.status && (
+          <Badge
+            pill
+            bg={getStatusColor(props.status)}
+            style={{
+              position: "absolute",
+              top: "10px",
+              right: "10px",
+              fontSize: "0.75rem",
+              padding: "5px 10px",
+            }}
+          >
+            {props.status === "Active" ? "Đang hoạt động" : "Đang phát triển"}
+          </Badge>
+        )}
       </div>
 
       <Card.Body className="d-flex flex-column">
