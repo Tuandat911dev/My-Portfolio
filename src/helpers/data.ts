@@ -1,9 +1,8 @@
-import nestImg from "assets/project/nestjs.png";
-import nextjsImg from "assets/project/nextjs.jpeg";
-import reactNativeImg from "assets/project/react-native.png";
-import reactUltimateImg from "assets/project/react-ultimate.png";
-import springMvcImg from "assets/project/spring-mvc.png";
-import springRestImg from "assets/project/spring-rest.png";
+import leolaptop from "assets/project/leolaptop.png";
+import trendora from "assets/project/trendora.png";
+import portfolio from "assets/project/portfolio.png";
+import pageturner from "assets/project/pageturner.png";
+import linkjob from "assets/project/linkjob.png";
 
 export const APP_DATA = {
   GMAIL_URL: "mailto:pdat100111@gmail.com",
@@ -72,61 +71,51 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     id: 1,
-    imgPath: reactNativeImg,
-    title: "React Native",
+    imgPath: trendora,
+    title: "Trendora",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "#!",
-    demoLink: "#!",
+      "A full-featured e-commerce platform for fashion retail with integrated VNPAY payment, OAuth2 (Google Login), and Role-based Access Control (RBAC). Optimized with Caffeine Cache and real-time notifications via WebSocket.",
+    githubLink: "https://gitlab.com/PhamTuanDat/back-end-trendora",
+    demoLink: "https://trendora-fashion.netlify.app/",
     status: "Active",
   },
   {
     id: 2,
-    imgPath: springRestImg,
-    title: "Jpva Spring REST",
+    imgPath: linkjob,
+    title: "LinkJob",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "#!",
+      "An IT recruitment platform similar to ITViec, enabling employers to post jobs and manage CVs, while helping candidates search for opportunities. Built with a Java Spring Boot RESTful API and a dynamic ReactJS frontend.",
+    githubLink: "https://github.com/Tuandat911dev/LinkJob",
     demoLink: "#!",
-    status: "Active",
+    status: "Developing",
   },
   {
     id: 3,
-    imgPath: springMvcImg,
-    title: "Java Spring MVC",
+    imgPath: pageturner,
+    title: "PageTurner",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "#!",
+      "A modern online bookstore featuring a high-quality UI and smooth API integration. Developed with ReactJS (TypeScript) and Ant Design for a professional look, integrated with a NestJS backend.",
+    githubLink: "https://github.com/Tuandat911dev/pageturner-ecommerce-web",
     demoLink: "#!",
     status: "Active",
   },
   {
     id: 4,
-    imgPath: nextjsImg,
-    title: "Next.js",
+    imgPath: portfolio,
+    title: "Personal Portfolio",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "#!",
-    demoLink: "#!",
+      "My professional portfolio built with ReactJS and TypeScript to showcase my technical skills, work experience, and projects. Optimized for performance and features multi-language support (EN, VI, JP).",
+    githubLink: "https://github.com/Tuandat911dev/My-Portfolio",
+    demoLink: "https://tuandatdev.netlify.app",
     status: "Active",
   },
   {
     id: 5,
-    imgPath: nestImg,
-    title: "Nest.js",
+    imgPath: leolaptop,
+    title: "LeoLaptop",
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "#!",
-    demoLink: "#!",
-    status: "Active",
-  },
-  {
-    id: 6,
-    imgPath: reactUltimateImg,
-    title: "React Javascript",
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    githubLink: "#!",
+      "A specialized laptop retail system focusing on catalog management and complex product specifications. Developed using Java Spring Boot (Spring MVC) to ensure a stable and responsive user experience.",
+    githubLink: "https://github.com/Tuandat911dev/Leo-Laptop",
     demoLink: "#!",
     status: "Active",
   },
