@@ -76,25 +76,49 @@ const About = () => {
                 {t("aboutSection.education")}
               </h4>
             </div>
-            <div>
-              <GlowCard identifier={`experience-5`}>
-                <div className="p-3 relative">
-                  <div className="experience-container">
-                    <div className="duration-text">
-                      <p>2022 - 2027</p>
-                    </div>
-                    <div className="details">
-                      <div className="icon">
-                        <FaGraduationCap size={36} />
+            <div className="flex flex-col gap-y-8">
+              <div className="mb-5">
+                <GlowCard identifier={`education-hust`}>
+                  <div className="p-3 relative">
+                    <div className="experience-container">
+                      <div className="duration-text">
+                        <p>{t("aboutSection.hustDuration")}</p>
                       </div>
-                      <div className="info">
-                        <p className="title">{t("aboutSection.degree")}</p>
-                        <p className="company">{t("aboutSection.university")}</p>
+                      <div className="details">
+                        <div className="icon">
+                          <FaGraduationCap size={36} />
+                        </div>
+                        <div className="info">
+                          <p className="title">{t("aboutSection.hustDegree")}</p>
+                          <p className="company">{t("aboutSection.hustUniversity")}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </GlowCard>
+                </GlowCard>
+              </div>
+
+              <div className="mb-5">
+                <GlowCard identifier={`education-bkacad`}>
+                  <div className="p-3 relative">
+                    <div className="experience-container">
+                      <div className="duration-text">
+                        <p>{t("aboutSection.bkacadDuration")}</p>
+                      </div>
+                      <div className="details">
+                        <div className="icon">
+                          <FaGraduationCap size={36} />
+                        </div>
+                        <div className="info">
+                          <p className="title">{t("aboutSection.bkacadDegree")}</p>
+                          <p className="company">{t("aboutSection.bkacadUniversity")}</p>
+                          <p className="text-xs text-[#16f2b3] mt-1">{t("aboutSection.bkacadClassification")}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </GlowCard>
+              </div>
             </div>
           </div>
         </Col>

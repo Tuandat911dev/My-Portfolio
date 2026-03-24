@@ -41,15 +41,20 @@
   },
 
   "aboutSection": {
-    "degree": "Bachelor of Electronics and Telecommunications Engineering",
-    "university": "Hanoi University of Science and Technology (HUST)",
+    "hustDuration": "12/2025 - PRESENT",
+    "bkacadDuration": "2022 - 2025",
+    "hustDegree": "Electronics and Telecommunications Engineering",
+    "hustUniversity": "Hanoi University of Science and Technology (HUST)",
+    "bkacadDegree": "Information Technology (GPA: 8.6/10)",
+    "bkacadUniversity": "BKACAD Academy of Technology",
+    "bkacadClassification": "Classification: Excellent",
     "title": "Know Who ",
     "subTitle": "I'M?",
     "description": {
       "p1": "Hi Everyone, I am ",
       "name": "Pham Tuan Dat",
       "p2": " from Hanoi, Vietnam.",
-      "p3": "I am a student majoring in Electronics and Telecommunications at Hanoi University of Science and Technology (HUST) with a deep-seated passion for software development.",
+      "p3": "I am a student majoring in Electronics and Telecommunications at HUST with a deep-seated passion for software development.",
       "p4": "I love leveraging my technical skills to build meaningful products that bring value to the community.",
       "p5": "Beyond the world of code, I am also:"
     },

@@ -41,8 +41,13 @@
   },
 
   "aboutSection": {
-    "degree": "Cử nhân Kỹ thuật Điện tử và Viễn thông",
-    "university": "Đại học Bách Khoa Hà Nội (HUST)",
+    "hustDuration": "12/2025 - HIỆN TẠI",
+    "bkacadDuration": "2022 - 2025",
+    "hustDegree": "Kỹ thuật Điện tử và Viễn thông",
+    "hustUniversity": "Đại học Bách Khoa Hà Nội (HUST)",
+    "bkacadDegree": "Công nghệ Thông tin (GPA: 8.6/10)",
+    "bkacadUniversity": "Học viện Công nghệ BKACAD",
+    "bkacadClassification": "Xếp loại: Giỏi (Excellent)",
     "title": "Mình là ",
     "subTitle": "ai?",
     "description": {
@@ -50,18 +55,18 @@
       "name": "Phạm Tuấn Đạt",
       "p2": " đến từ Hà Nội.",
       "p3": "Mình hiện là sinh viên ngành Điện tử Viễn thông tại Đại học Bách Khoa Hà Nội (HUST) nhưng lại mang trong mình niềm đam mê mãnh liệt với lập trình phần mềm.",
-      "p4": "Mình thích vận dụng những kỹ năng kỹ thuật để tạo ra các sản phẩm thực tế và hữu ích cho mọi người.",
-      "p5": "Bên cạnh việc 'gõ phím', mình còn là một người:"
+      "p4": "Mình thích vận dụng những kỹ năng kỹ thuật để tạo ra các sản phẩm thực tế và hữu ích cho cộng đồng.",
+      "p5": "Bên cạnh thế giới của những dòng code, mình còn là một người:"
     },
     "activities": [
       "Yêu âm nhạc, thích chơi sáo trúc và đàn guitar",
       "Đam mê thể thao như tập Gym và cầu lông",
-      "Luôn tò mò về các công nghệ mới"
+      "Luôn tìm tòi và khám phá các công nghệ mới"
     ],
     "quote": "\"Cách duy nhất để tạo nên những điều tuyệt vời là hãy yêu công việc bạn đang làm.\"",
     "quoteAuthor": "-- Steve Jobs",
-    "education": "Học tập",
-    "find": "Theo dõi mình",
+    "education": "Học vấn",
+    "find": "THEO DÕI MÌNH",
     "contact": "Liên hệ với mình"
   }
 }
