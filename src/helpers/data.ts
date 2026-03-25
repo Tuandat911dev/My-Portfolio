@@ -96,7 +96,7 @@ export const PROJECTS = [
     description:
       "A modern online bookstore featuring a high-quality UI and smooth API integration. Developed with ReactJS (TypeScript) and Ant Design for a professional look, integrated with a NestJS backend.",
     githubLink: "https://github.com/Tuandat911dev/pageturner-ecommerce-web",
-    demoLink: "#!",
+    demoLink: "https://pageturnerbook.netlify.app",
     status: "Active",
   },
   {
