@@ -37,7 +37,10 @@
   "projects": {
     "myRecent": "My Recent ",
     "project": "Projects",
-    "description": "Here are a few projects I've worked on recently."
+    "description": "Here are a few projects I've worked on recently.",
+    "activeStatus": "Active",
+    "developingStatus": "Developing",
+    "maintainStatus": "Maintenance"
   },
 
   "aboutSection": {

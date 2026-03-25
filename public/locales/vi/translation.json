@@ -37,7 +37,10 @@
   "projects": {
     "myRecent": "Các dự án ",
     "project": "gần đây",
-    "description": "Dưới đây là những dự án tôi đã tham gia phát triển."
+    "description": "Dưới đây là những dự án tôi đã tham gia phát triển.",
+    "activeStatus": "Đang hoạt động",
+    "developingStatus": "Đang phát triển",
+    "maintainStatus": "Đang bảo trì"
   },
 
   "aboutSection": {

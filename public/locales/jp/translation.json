@@ -36,7 +36,10 @@
   "projects": {
     "myRecent": "最近の",
     "project": "プロジェクト",
-    "description": "最近取り組んだ主なプロジェクトをご紹介します。"
+    "description": "最近取り組んだ主なプロジェクトをご紹介します。",
+    "activeStatus": "稼働中",
+    "developingStatus": "開発中",
+    "maintainStatus": "メンテナンス中"
   },
   "aboutSection": {
     "hustDuration": "2025年12月 - 現在",

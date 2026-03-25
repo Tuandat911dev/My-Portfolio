@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Badge from "react-bootstrap/Badge";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 interface IProps {
   imgPath: string;
@@ -14,6 +15,8 @@ interface IProps {
 }
 
 function ProjectCard(props: IProps) {
+  const { t } = useTranslation();
+
   const getStatusColor = (status?: string) => {
     switch (status) {
       case "Active":
@@ -44,7 +47,11 @@ function ProjectCard(props: IProps) {
               padding: "5px 10px",
             }}
           >
-            {props.status === "Active" ? "Đang hoạt động" : "Đang phát triển"}
+            {{
+              Active: t("projects.activeStatus"),
+              Developing: t("projects.developingStatus"),
+              Maintenance: t("projects.maintainStatus"),
+            }[props.status] || t("projects.activeStatus")}
           </Badge>
         )}
       </div>
