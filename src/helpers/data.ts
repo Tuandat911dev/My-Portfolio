@@ -75,7 +75,7 @@ export const PROJECTS = [
     title: "Trendora",
     description:
       "A full-featured e-commerce platform for fashion retail with integrated VNPAY payment, OAuth2 (Google Login), and Role-based Access Control (RBAC). Optimized with Caffeine Cache and real-time notifications via WebSocket.",
-    githubLink: "https://gitlab.com/PhamTuanDat/back-end-trendora",
+    githubLink: "https://gitlab.com/trendora",
     demoLink: "https://trendora-fashion.netlify.app/",
     status: "Active",
   },
